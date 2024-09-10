@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Forum';
+    src: url('Forum-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Forum', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    transition: opacity 0.5s;  /* Smooth fading for the photo */
+}
+
+.left-screen {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.left-screen h1 {
+    font-size: 4rem;
+    color: #333;
+    font-family: 'Forum', sans-serif;
+}
+
+.right-screen {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.right-screen img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin-left: -10%;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.5s ease;
+}
+
+header.scrolled {
+    background-color: #333; /* Change to solid color when scrolled */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Forum', sans-serif;
+    transition: color 0.5s ease;
+}
+
+header.scrolled nav ul li a {
+    color: white; /* Change to white after scrolling */
+}
+
+section {
+    padding: 50px;
+    height: 100vh;
+    background-color: #f5f5f5; /* No fade for the sections */
+}
+
+#profile, #abroad, #contact {
+    margin-top: 100px;
+}
